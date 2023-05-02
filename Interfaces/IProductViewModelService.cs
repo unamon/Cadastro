@@ -14,7 +14,6 @@ namespace Cadastro.Interfaces
         IEnumerable<CategoryViewModel> GetAllCategories();
 
         void Insert(ProductViewModel viewModel);
-        void Insert(Product product);
         void Update(ProductViewModel viewModel);
         void Delete(int id);
     }
