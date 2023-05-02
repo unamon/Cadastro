@@ -46,8 +46,7 @@ namespace Cadastro.Controllers
         {
             
             try
-            {
-                
+            {               
                 if (ModelState.IsValid)
                 {
                     _productViewModelService.Insert(viewModel);

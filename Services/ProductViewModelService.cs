@@ -60,11 +60,6 @@ namespace Cadastro.Services
 
             _productRepository.Insert(entity);
         }
-        
-        public void Insert(Product product)
-        {
-            _productRepository.Insert(product);
-        }
 
         public void Update(ProductViewModel viewModel)
         {
