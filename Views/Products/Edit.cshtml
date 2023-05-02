@@ -1,4 +1,4 @@
-﻿@* @model Cadastro.ViewModels.ClientViewModel
+﻿@model Cadastro.ViewModels.ProductViewModel
 
 @{
     ViewData["Title"] = "Editar";
@@ -27,18 +27,22 @@
                 <input asp-for="Value" class="form-control" />
                 <span asp-validation-for="Value" class="text-danger"></span>
             </div>
+            @* <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <input asp-for="Category.Name" class="form-control" />
+                <span asp-validation-for="Value" class="text-danger"></span>
+            </div> *@
             <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <label asp-for="CategoryId" class="control-label"></label>
+                <select id="sltdCat" asp-for="CategoryId" asp-items="Model.Categories"></select>         
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Ative" /> @Html.DisplayNameFor(model => model.Ative)
+                    <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
                 </label>
-            </div>
+            </div> 
             <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <input type="submit" value="Criar" class="btn btn-primary" />
             </div>
         </form>
     </div>
@@ -50,4 +54,4 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-} *@
+}
