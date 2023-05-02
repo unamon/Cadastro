@@ -20,6 +20,7 @@ namespace Cadastro.ViewModels
 
         [Display(Name = "Valor")]
         [Required(ErrorMessage = "O valor é requerido.")]
+        [DataType(DataType.Currency)]
         public Double Value { get; set; }
 
         // [Display(Name = "Categoria")]
