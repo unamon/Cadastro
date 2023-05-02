@@ -27,7 +27,7 @@ namespace Cadastro.ViewModels
 
         [Required(ErrorMessage = "A categoria é requerida.")]
         [Display(Name = "Categoria")]
-        public string Category { get; set; }
+        public string CategoryId { get; set; }
 
         public List<SelectListItem> Categories { get; set; } = new List<SelectListItem>
         {
